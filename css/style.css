@@ -1,0 +1,446 @@
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.navbar-wrap{
+	background-color: black;
+    padding: 40px;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.navbar-grid{
+    display: grid;
+    flex-wrap: wrap;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 500px;
+    flex-grow: 1; 
+}
+
+.nav-container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+.rightnav {
+    display: block;
+}
+
+.leftnav {
+    display: block;
+}
+
+.itembar ul{
+    list-style: none;
+	margin: 0;
+	padding: 10;
+    display: flex;
+}
+
+.itembar ul a {
+    display:flex;
+	color:white;
+	text-decoration: none;
+	font-weight:700;
+	font-size: 18px;
+	line-height: 22px;
+	padding:10 15px;
+}
+
+.itembar ul li{
+	position:relative;
+	margin: 0;
+	padding: 0; 
+}
+
+.itembar ul li a:hover{
+    background-color: orange;
+}
+
+.itembar ul ul ul{
+	display: none;
+	position:absolute;
+	top:100%;
+	left:0;
+	padding: 0;
+}
+
+.itembar ul ul ul li{
+	float:none;
+	width:200px
+}
+
+.itembar ul ul a{
+	line-height:120%;
+	padding:10px 15px;
+}
+
+.itembar ul ul ul {
+	top:10;
+    transition: 0.5s;
+}
+
+.itembar ul li:hover > ul
+{
+	display: block;
+}
+
+.itembar-grid{
+    display: grid;
+    flex-wrap: wrap;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 500px;
+    flex-grow: 1; 
+}
+
+.itembar-container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+.button{
+    color: white;
+    text-decoration: none;
+    font-weight: light;
+    font-size: 20px;
+    padding: 15px;
+    min-width: 314px;
+    display: block;
+    transition: .5s;
+    text-align: center;
+    text-shadow: 2px 2px 4px #333;
+    border: 2px solid orange;
+}
+
+.button-grid{
+    display: grid;
+    flex-wrap: wrap;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 400px;
+}
+
+.button:hover {
+    background-color: orange;
+}
+
+.button-info{
+    color: white;
+    text-decoration: none;
+    font-weight: light;
+    font-size: 14px;
+    padding: 10px;
+    min-width: 314px;
+    display: block;
+    transition: .5s;
+    text-align: center;
+    text-shadow: 2px 2px 4px #333;
+    border: 2px solid orange; 
+}
+
+.item-wrapper{
+    padding: 20px 0px;
+}
+
+/*slightly altered dropdown menu code from https://stackoverflow.com/questions/44832572/pure-css-clickable-dropdown */
+/*hide the inputs/checkmarks and submenu*/
+input, ul.submenu {
+    display: none;
+  }
+  /*position the label*/
+  label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+  }
+  /*show the submenu when input is checked*/
+  input:checked~ul.submenu {
+    display: block;
+  }
+  
+.primary-nav ul{
+	list-style: none;
+	margin: 0;
+	padding: 10;
+    display: flex;
+}
+
+.primary-nav ul a
+{
+	display:flex;
+	color:white;
+	text-decoration: none;
+	font-weight:700;
+	font-size: 24px;
+	line-height: 32px;
+	padding:0 15px;
+}
+
+.primary-nav ul li{
+	position:relative;
+	margin: 0;
+	padding: 0; 
+}
+
+.primary-nav li.active{
+    list-style: none;
+	margin: 0;
+	padding: 10;
+    display: flex;
+	border-bottom: 2px solid orange;
+}
+
+.primary-nav li.home{
+    list-style: none;
+	margin: 0;
+	padding: 10;
+    display: flex;
+	border-bottom: 2px solid white;
+}
+
+.primary-nav ul li{
+    border-bottom: 2px solid white;
+}
+
+.primary-nav ul li a:hover{
+    color: orange;
+}
+
+.primary-nav ul li:hover{
+    border-bottom: 2px solid orange; 
+}
+
+.primary-nav ul ul{
+	display: none;
+	position:absolute;
+	top:100%;
+	left:0;
+	padding: 0;
+}
+
+.primary-nav ul ul li{
+	float:none;
+	width:200px
+}
+
+.primary-nav ul a{
+	line-height:120%;
+	padding:10px 15px;
+}
+
+.primary-nav ul ul {
+	top:10;
+    transition: 0.5s;
+}
+
+.primary-nav ul li:hover > ul
+{
+	display: block;
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.previews {
+    color: orange;
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(255, 255, 255, 0.034), rgb(0, 0, 0)), url("../imgs/fallout.jpg");
+    background-size: cover;
+    background-position: center right;
+    min-height: 70vh;
+    display: flex;
+    font-size: 30px;
+    text-shadow: 2px 2px 4px #333;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.corner {
+    position: absolute;
+    bottom: 12%;
+    left: 10%;
+    transform: translate(-26%, 5%);
+  }
+
+.previews-sub {
+    color: orange;
+    background-image: url("../imgs/in-the-mood-for-love.jpg");
+    background-size: cover;
+    background-position: center right;
+    min-height: 70vh;
+    display: flex;
+    text-shadow: 2px 2px 4px #333;
+}
+
+.previews-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+ img {
+    width: 100%;
+ }
+.wrapper{
+    padding: 60px 0px;
+}
+
+.preview-button{
+    color: white;
+    text-decoration: none;
+    font-weight: light;
+    font-size: 20px;
+    padding: 15px;
+    max-width: 314px;
+    transition: .5s;
+    text-align: center;
+    text-shadow: 2px 2px 4px #333;
+}
+
+.preview-button:hover {
+    color: orange;
+}
+
+.about{
+	background-color: rgb(27, 27, 37);
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-weight: light;
+    font-size: 12px;
+}
+
+.feature{
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.98), rgba(22, 15, 82, 0.705));
+
+    color: white;
+}
+
+.p-about{
+    font-size: 20px;
+}
+
+.feature-basics{
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.98), rgba(92, 30, 30, 0.705));
+    color: white;
+}
+
+.feature-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5%;
+}
+
+.feature-img{
+
+    background-size: cover;
+    background-position: center;
+}
+
+hr.dashed {
+    border-bottom: 14px dashed white;
+  }
+
+
+footer{
+    background-color: #1A1A1A;
+    color: white;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5%;
+}
+
+@media (max-width: 950px) {
+    .navbar-grid {
+        grid-gap: 20px;
+    }
+
+    .previews-grid {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        text-align: center;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+
+    .container{
+        max-width: 580px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+
+    .p-about{
+        font-size: 20px;
+    }
+
+    img {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+
+    .button-grid{
+        grid-template-columns: 1fr;
+        grid-gap: 400px;
+    }
+    .itembar-grid{
+        grid-template-columns: 1fr;
+        grid-gap: 500px;
+    }
+
+    .button-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .itembar-wrapper{
+        padding: 10px;
+    }
+  }
+  
+  @media (max-width: 550px) {
+    .container{
+        max-width: 480px;
+    }
+  }
+
+  @media (min-width: 1800px) {
+    .container{
+        max-width: 1500px;
+    }
+  }
